@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.weifengzz.myvedioplayerdemo.MainActivity$PlaceholderFragment" >
+
+    <com.weifengzz.myvedioplayerdemo.views.VideoSurfaceView
+        android:id="@+id/vs_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/vs_view" >
+
+        <com.weifengzz.myvedioplayerdemo.views.VideoImageView
+            android:id="@+id/vi_img01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play" />
+
+        <com.weifengzz.myvedioplayerdemo.views.VideoImageView
+            android:id="@+id/vi_img02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/big" />
+
+        <SeekBar
+            android:id="@+id/vsb_seekbar"
+            style="@style/Widget.SeekBar.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/vi_img02"
+            android:layout_toRightOf="@id/vi_img01" />
+    </RelativeLayout>
+
+</RelativeLayout>
